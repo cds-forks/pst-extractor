@@ -245,10 +245,14 @@ export class PSTFolder extends PSTObject {
       const childDescriptor = this.pstFile.getDescriptorIndexNode(
         long.fromNumber(emailRow.entryValueReference)
       )
-      const child = PSTUtil.detectAndLoadPSTObject(
-        this.pstFile,
-        childDescriptor
-      )
+      let child
+      try {
+        child = PSTUtil.detectAndLoadPSTObject(this.pstFile, childDescriptor)
+      } catch (err) {
+        console.log('Exception Error in No: ', this.currentEmailIndex)
+        this.currentEmailIndex++
+        return this.getNextChild()
+      }
       this.currentEmailIndex++
       return child
     } else if (this.fallbackEmailsTable) {
