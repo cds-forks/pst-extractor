@@ -1,5 +1,5 @@
 {
-  "name": "@abdulghaffar349/pst-extractor",
+  "name": "@cds-forks/pst-extractor",
   "version": "1.8.0",
   "description": "Extract objects from MS Outlook/Exchange PST files",
   "main": "dist/index.js",
@@ -15,8 +15,8 @@
     "test:build": "run-s build",
     "test:unit": "cross-env CI=1 jest --coverage --reporters=default --reporters=jest-junit"
   },
-  "repository": "abdulghaffar349/pst-extractor",
-  "author": "Abdul Ghaffar (abdulghaffar349@gmail.com)",
+  "repository": "cds-forks/pst-extractor",
+  "author": "Ahsan Ali (ahsan.ali@tkxel.io)",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.15.0",
